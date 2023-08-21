@@ -1,0 +1,12 @@
+---
+version: "3.9"
+services:
+  fluidd:
+    image: cadriel/fluidd
+    container_name: fluidd
+    ports:
+      - 80:80
+    restart: unless-stopped
+    deploy:
+      placement:
+        constraints: [node.labels.Purpose==3DPrinter]
