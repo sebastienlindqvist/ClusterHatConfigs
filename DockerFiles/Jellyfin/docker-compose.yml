@@ -10,15 +10,15 @@ services:
       - JELLYFIN_PublishedServerUrl=192.168.0.5 #optional
     volumes:
       - type: bind
-        source: /home/pi/DockerFile/Jellyfin/config
+        source: /home/pi/Desktop/ClusterHatConfigs/DockerFiles/Jellyfin/config
         target: /config
         
       - type: bind
-        source: /home/pi/DockerFile/Jellyfin/tvshows
+        source: /home/pi/Desktop/ClusterHatConfigs/DockerFiles/Jellyfin/tvshows
         target: /data/tvshows
         
       - type: bind
-        source: /home/pi/DockerFile/Jellyfin/movies
+        source: /home/pi/Desktop/ClusterHatConfigs/DockerFiles/Jellyfin/movies
         target: /data/moveies
     ports:
       - 8096:8096

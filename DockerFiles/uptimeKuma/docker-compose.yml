@@ -6,7 +6,7 @@ services:
     #container_name: uptime-kuma
     volumes:
       - type: bind
-        source: /home/pi/DockerFile/uptimeKuma/uptime-kuma-data
+        source: /home/pi/Desktop/ClusterHatConfigs/DockerFiles/uptimeKuma/uptime-kuma-data
         target: /app/data
     ports:
       - 3001:3001  # <Host Port>:<Container Port>
