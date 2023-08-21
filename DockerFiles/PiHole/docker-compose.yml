@@ -16,8 +16,8 @@ services:
       WEBPASSWORD: 'Watashi'
     # Volumes store your data between container upgrades
     volumes:
-      - '/portainer/Files/AppData/Config/PiHole/etc'
-      - '/portainer/Files/AppData/Config/PiHole/dnsmasq'
+      - '/home/pi/Desktop/ClusterHatConfigs/DockerData/PiHole/etc'
+      - '/home/pi/Desktop/ClusterHatConfigs/DockerData/PiHole/dnsmasq'
     #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
     cap_add:
       - NET_ADMIN # Required if you are using Pi-hole as your DHCP server, else not needed
