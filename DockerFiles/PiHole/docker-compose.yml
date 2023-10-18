@@ -26,5 +26,6 @@ services:
     deploy:
       placement:
         constraints:
-          - "node==p4"
+          - "node.labels.name==cbridge"
+          - "node.role == manager"
 
