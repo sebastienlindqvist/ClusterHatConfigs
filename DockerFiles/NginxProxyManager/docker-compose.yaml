@@ -23,3 +23,8 @@ services:
     volumes:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
+
+    deploy:
+      placement:
+        constraints:
+          - "node.labels.name==cbridge"
