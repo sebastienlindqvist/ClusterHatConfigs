@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.9'
 services:
   app:
     image: 'jc21/nginx-proxy-manager:latest'
@@ -21,8 +21,12 @@ services:
       # DISABLE_IPV6: 'true'
 
     volumes:
-      - ./data:/data
-      - ./letsencrypt:/etc/letsencrypt
+      - type: bind
+        source: /home/Server/Desktop/ClusterHatConfigs/DockerFiles/NginxProxyManager/data
+        target: /data
+      - type: bind
+        source: /home/Server/Desktop/ClusterHatConfigs/DockerFiles/NginxProxyManager/letsencrypt
+        target: /letsencrypt
 
     deploy:
       placement:
